@@ -28,7 +28,6 @@ module SecurityClient
         enc.close() if enc
         raise
       end
-      puts res
       return res
     end
 
@@ -42,7 +41,6 @@ module SecurityClient
         dec.close() if dec
         raise
       end
-      puts res
       return res
     end
 
