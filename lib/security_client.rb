@@ -501,8 +501,6 @@ class SecurityClient::Decryption
     if @key.present? and @key.key?("dec")
       size = @data.length - @algo[:tag_length]
       if size > 0
-        puts @data[0..size-1]
-
         plain_text = @key['dec'].update(@data[0..size-1])
         @data = @data[size..-1]
       end
