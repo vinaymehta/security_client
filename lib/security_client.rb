@@ -333,7 +333,7 @@ class SecurityClient::Decryption
   # Initialize the decryption module object
   # Set the credentials in instance varibales to be used among methods
   # the server to which to make the request
-  raise RuntimeError, 'Some of your credentials are missing, please check!' if !validate_creds(creds)
+  # raise RuntimeError, 'Some of your credentials are missing, please check!' if !validate_creds(creds)
   @host = creds.host.blank? ? VOLTRON_HOST : creds.host
 
   # The client's public API key (used to identify the client to the server
